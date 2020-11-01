@@ -39,7 +39,7 @@ PROBABILITIES = {
   "KARMACHECK" : 0.005,
   "LEARN": 0.02,
   "DELETE": 0.02 }
-COMMENTS_DISABLED = True
+COMMENTS_DISABLED = False
 MAX_CACHE_SIZE = 128
 NUMBER_DAYS_FOR_POST_TO_BE_OLD = 365
 SUBREDDIT_LIST = [] # limit learning and posting to these subreddits. Empty = Random
@@ -60,9 +60,9 @@ SPINREWRITER_EMAIL_ADDRESS = ""
 SPINREWRITER_API_KEY = ""
 
 #IMGUR UPLOAD OPTIONS
-DO_WE_REUPLOAD_TO_IMGUR = False
-imgur_client_id = ""
-imgur_client_secret = ""
+DO_WE_REUPLOAD_TO_IMGUR = True
+imgur_client_id = "stoneconda"
+imgur_client_secret = "dick3944"
 
 DO_WE_ADD_PARAMS_REUPLOAD = False
 
@@ -74,7 +74,7 @@ DO_WE_ADD_PARAMS_REUPLOAD = False
 # using (hours, minutes) as a 24h clock
 # "days" is used to define how many days after the first bot run to use that schedule
 # You can add multiple schedules to be run after x days of the bots life
-USE_SLEEP_SCHEDULE = True
+USE_SLEEP_SCHEDULE = False
 BOT_SCHEDULES = [
   {"days": 0, "schedule": [((4,00),(5,00)), ((17,30),(19,30))]},
   {"days": 4, "schedule": [((8,00),(10,00)), ((20,30),(23,20))]},
@@ -109,7 +109,7 @@ reddit_bot_action = collections.namedtuple(
     "RedditBotAction", ["name", "action", "probability", "rate_limit_unlock_epoch"]
 )
 
-if COMMENTS_DISABLED:
+if COMMENTS_DISABLED: 
   log.info("COMMENTS ARE DISABLED")
   PROBABILITIES['REPLY'] = 0.0
 
